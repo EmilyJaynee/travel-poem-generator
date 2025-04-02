@@ -1,0 +1,25 @@
+body {
+  background: #e0f2f1;
+}
+h1 {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+form {
+  text-align: center;
+}
+footer {
+  text-align: center;
+  color: grey;
+}
+.container {
+  background: #e0f2f1;
+  margin: 120px auto;
+  max-width: 600px;
+}
+.example {
+  font-size: 10px;
+  color: grey;
+}
