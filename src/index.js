@@ -3,12 +3,14 @@ function typePoem(response) {
     strings: response.data.answer,
     autoStart: true,
     cursor: null,
-    delay: 4,
+    delay: 45,
   });
 }
 
 function generatePoem() {
   event.preventDefault();
+  let loading = document.querySelector("#poem");
+  loading.innerHTML = "Loading...";
 
   let poemPrompt = document.querySelector("#poem-prompt");
   let apiKey = "19884f8731abea4oebtff3a019e58351";
@@ -16,9 +18,6 @@ function generatePoem() {
     "You are a travel poem generator. You love to write a short, 4 lined poem. Make sure to follow user instructions";
   let prompt = `user instructions: Generate a poem about travel using the theme ${poemPrompt.value}`;
   let aiApi = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
-
-  console.log(`prompt. ${prompt}`);
-  console.log(context);
 
   axios.get(aiApi).then(typePoem);
 }
