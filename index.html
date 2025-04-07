@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Travel Poems</title>
   </head>
@@ -11,16 +12,15 @@
     <div class="container">
       <h1>Welcome to my AI Travel Themed Poem Generator 🌍</h1>
       <p>What would you like your travel themed poem to be about?</p>
-      <p class="example">
-        i.e backpacking, a location, hostel life, travel resorts ect
-      </p>
+      <p class="example">i.e hostel life, backpacking, cats, aliens ect</p>
       <form action="" id="poem-generator-form">
         <input
           type="text"
           placeholder="hitch hicking"
           autofocus
           required
-          autocomplete="off" />
+          autocomplete="off"
+          id="poem-prompt" />
         <input type="submit" />
       </form>
       <p id="poem"></p>
