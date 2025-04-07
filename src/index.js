@@ -10,7 +10,7 @@ function typePoem(response) {
 function generatePoem() {
   event.preventDefault();
   let loading = document.querySelector("#poem");
-  loading.innerHTML = "Loading...";
+  loading.innerHTML = `<div class="blink"> ⌛ Loading... </div>`;
 
   let poemPrompt = document.querySelector("#poem-prompt");
   let apiKey = "19884f8731abea4oebtff3a019e58351";

@@ -23,3 +23,12 @@ footer {
   font-size: 10px;
   color: grey;
 }
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.blink {
+  animation: blink 1s step-start 0s infinite;
+}
